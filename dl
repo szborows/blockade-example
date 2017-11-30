@@ -1,0 +1,3 @@
+#!/usr/bin/env bash
+IP=`docker inspect --format '{{ .NetworkSettings.IPAddress }}' blockadeexample_backend`
+exec curl -XPOST $IP:8000/dl -d "url=http://file_server/files/1MB.bin"

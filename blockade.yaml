@@ -1,0 +1,16 @@
+containers:
+  file_server:
+    image: nginx:1.11-alpine
+    volumes:
+      "./files": "/usr/share/nginx/html/files"
+
+  backend:
+    image: requestsbugmwe/backend
+    links:
+      - file_server
+    volumes:
+      "./backend": "/app"
+
+network:
+  flaky: 30%
+  slow: 5000ms 10000ms distribution normal

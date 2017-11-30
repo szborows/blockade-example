@@ -1,0 +1,2 @@
+#!/usr/bin/env bash
+docker build --build-arg proxy="$http_proxy" -t blockade-example/backend backend/
