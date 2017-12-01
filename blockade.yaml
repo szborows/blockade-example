@@ -5,7 +5,7 @@ containers:
       "./files": "/usr/share/nginx/html/files"
 
   backend:
-    image: requestsbugmwe/backend
+    image: blockade-example/backend
     links:
       - file_server
     volumes:

@@ -10,7 +10,7 @@ import urllib.request
 
 NUM = 0
 USE_REQUESTS = True
-logging.basicConfig(level=logging.INFO)
+logging.basicConfig(format='%(levelname)s | %(message)s', level=logging.INFO)
 
 
 async def handle_download(request):
