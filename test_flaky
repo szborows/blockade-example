@@ -6,4 +6,5 @@ num=$1
 blockade flaky --all
 ( sleep 30 ; blockade fast --all ) &
 ./dl
-sleep 5
+sleep 2
+blockade fast --all
